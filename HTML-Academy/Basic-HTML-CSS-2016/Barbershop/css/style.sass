@@ -1,42 +1,113 @@
 @charset "utf-8"
 
-/* ----->Шапка сайта<----- */
-/* Центнировщик в шапке */
-.header-positioner
-	margin: 0 auto
-	padding: 0 10px
-	width: 940px
-/* Верхнее меню */
-.n-top-menu
-	float: left
-	margin-bottom: 57px
-	padding: 30px 0
-	width: 780px
-.n-top-menu ul li
-	display: inline-block
-/* Верхнее меню авторизации */
-.top-account
-	float: right
-	padding: 30px 0
-	width: 140px
+/* ----->Общее<----- */
+.overall
+	background: #000000 url("../image/background.jpg") no-repeat center top
+	font-family: PT Sans Narrow
+	font-size: 16px
+	text-transform: uppercase
+
 /* Распорка для float */
 .clearfix::after
 	content: ""
 	display: table
 	clear: both
 
+/* ----->Шапка сайта<----- */
+.main-header
+	background-color: #000000
+/* Центнировщик в шапке */
+.header-center
+	margin: 0 auto
+	padding: 0 10px
+	width: 940px
+/* Верхнее меню */
+.n-top-menu
+	float: left
+	padding: 20px 0 30px
+	width: 780px
+.n-top-menu ul li
+	display: inline-block
+.n-top-menu ul li a
+	margin-right: 42px
+	color: #ffffff
+/* Верхнее меню авторизации */
+.top-account
+	float: right
+	padding: 20px 0 10px
+	width: 140px
+	text-align: center
+.top-account .account-enter
+	color: #ffffff
+
 /* ----->Главный контент<----- */
 /* Центнировщик на главной */
-.main-positioner
+.main-center
 	margin: 0 auto
 	padding: 0 10px
 	width: 940px
 /* Главный логотип */
 .main-logo
-	margin-bottom: 30px
-	background-image: url(../image/borodinskilogo.png)
+	margin: 57px auto 30px
 	height: 204px
 	width: 368px
+/* Преимущества */
+.s-advantages-item
+	float: left
+	margin-bottom: 86px
+	padding-right: 10px
+	width: 300px
+	color: #ffffff
+	text-align: center
+.s-advantage-item-title
+	font-size: 30px
+/* Первый информационный блок */
+.first-info
+	padding: 0 10px
+	margin-bottom: 34px
+	width: 940px
+	background: url("../image/white_bg.jpg") no-repeat center
+.first-info-news
+	float: left
+	width: 400px
+.first-info-gallery
+	float: right
+	width: 400px
+/* Второй информационный блок */
+.second-info
+	padding: 0 10px
+	width: 940px
+	background: url("../image/white_bg.jpg") no-repeat center
+.second-info-contacts
+	float: left
+	width: 400px
+.second-info-record
+	float: right
+	width: 400px
+
+
+/* ----->Подвал сайта<----- */
+.main-footer
+	background-image: url(../image/footer_bg.jpg)
+/* Центнировщик в подвале */
+.footer-center
+	margin: 64px auto 0
+	padding: 0 10px
+	width: 940px
+/* Контактная информация */
+.footer-address
+	float: left
+	margin-right: 10px
+	width: 320px
+/* Кнопки соц сетей */
+.footer-social
+	float: left
+	margin-right: 10px
+	width: 220px
+/* Разработчики */
+.footer-developers
+	float: right
+	width: 140px
 
 
 	

@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/reset.css">
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
   <title>Главная страница</title>
 </head>
-<body>
+<body class="overall">
 <header class="main-header">
-  <div class="header-positioner clearfix">
+  <div class="header-center clearfix">
     <div class="top-menu">
       <nav class="n-top-menu">
         <ul>
-          <li><a href="#">Главная</a></li>
           <li><a href="#">Информация</a></li>
           <li><a href="#">Новости</a></li>
           <li><a href="#">Прайс-лист</a></li>
@@ -27,12 +27,14 @@
   </div>
 </header>
 <main class="main-content">
-  <div class="main-positioner">
+  <div class="main-center">
     <div class="logo main-logo">
-      <a href="#"><img src="#" alt="Барбершоп Бородинский"></a>
+      <a href="index.html">
+        <img src="image/logo.png" alt="Барбершоп Бородинский" width="368" height="204">
+      </a>
     </div>
     <div class="advantages">
-      <section class="s-advantages">
+      <section class="s-advantages clearfix">
         <div class="s-advantages-item">
           <div class="s-advantage-item-title">быстро</div>
           <p class="s-advantages-item-description">
@@ -59,10 +61,10 @@
         </div>
       </section>
     </div>
-    <div class="info">
-      <section class="s-info-news">
+    <div class="first-info clearfix">
+      <section class="first-info-news">
         <h2>Новости</h2>
-        <ul class="s-info-news-preview">
+        <ul class="s-first-info-news-preview">
           <li>
             <p>
               нам наконец завезли ягермайстер! теперь Вы можете
@@ -80,17 +82,17 @@
         </ul>
         <a href="#">все новости</a>
       </section>
-      <section class="content-gallery">
+      <section class="first-info-gallery">
         <h2>Фотогаллерея</h2>
-        <figure class="gallery-photo">
+        <figure class="s-first-info-gallery-photo">
           <img src="#" alt = "#">
         </figure>
         <button type="button">назад</button>
         <button type="button">вперед</button>
       </section>
     </div>
-    <div class="data">
-      <section class="data-info">
+    <div class="second-info clearfix">
+      <section class="second-info-contacts">
         <h2>контактная информация</h2>
         <p>
           барбершоп "бородинский"<br>
@@ -105,11 +107,11 @@
         <a href="#">Как проехать</a>
         <a href="#">Обратная связь</a>
       </section>
-      <section class="data-record">
+      <section class="second-info-record">
         <h2>Записаться</h2>
         Укажите желаемую дату и время и мы свяжемся
         с Вами для подтверждения брони
-        <form class="data-record-appointment-form" action="/">
+        <form class="second-info-record-appointment-form" action="/">
           <input type="date" name="date">
           <input type="time" name="time">
           <input type="text" name="name" placeholder="ВАШЕ ИМЯ">
@@ -121,22 +123,28 @@
   </div>
 </main>
 <footer class="main-footer">
-  <section class="footer-address">
-    барбершоп "бородинский"<br>
-    адрес: г. Санкт-Петербург, б.Конюшенная, д. 19/8<br>
-    <span>Как нас найти</span><br>
-    <a href="tel:+74956660266">телефон: +7 (495) 666-02-66</a>
-  </section>
-  <section class="footer-social">
-    <h3>Давайте дружить</h3>
-    <a class="social-btn social-btn-vk" href="#"></a>
-    <a class="social-btn social-btn-fb" href="#"></a>
-    <a class="social-btn social-btn-inst" href="#"></a>
-  </section>
-  <section class="footer-developers">
-    <h3>Разработано:</h3>
-    <a href="#">htmlacademy.ru</a>
-  </section>
+  <div class="footer-center clearfix">
+    <section class="footer-address">
+      барбершоп "бородинский"<br>
+      адрес: г. Санкт-Петербург, б.Конюшенная, д. 19/8<br>
+      <span>Как нас найти</span><br>
+      <a href="tel:+74956660266">телефон: +7 (495) 666-02-66</a>
+    </section>
+    <section class="footer-social">
+      <h3>Давайте дружить</h3>
+      <a class="social-btn social-btn-vk" href="#"></a>
+      <a class="social-btn social-btn-fb" href="#"></a>
+      <a class="social-btn social-btn-inst" href="#"></a>
+    </section>
+    <section class="footer-developers">
+      <h3>Разработано:</h3>
+      <a href="#">htmlacademy.ru</a>
+    </section>
+  </div>
+<h2 style="color: blue;">Планы на ближайшую неделю</h2>
+  <p style="text-align: center;"><img src="http://www.hoopythoughts.com/wp-content/uploads/2011/03/to_do.jpg" width="200" height="200"></p>
+  <img src="http://www.321go.com.au/img/results.png" alt="results.png" width="200" height="200">
+  <img src="http://cdkeyplay.com/wp-content/uploads/2015/05/Adobe-Photoshop-CS6-free-code.png" alt="" width="200" height="200">
 </footer>
 </body>
 </html>
