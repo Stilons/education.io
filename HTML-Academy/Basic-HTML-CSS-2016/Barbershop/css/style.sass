@@ -1,10 +1,11 @@
 @charset "utf-8"
 
 /* ----->Общее<----- */
-.overall
+body
 	background: #000000 url("../image/background.jpg") no-repeat center top
-	font-family: PT Sans Narrow
-	font-size: 16px
+	font-family: PT Sans Narrow, Arial, sans-serif
+	font-size: 14px
+	line-height: 24px
 	text-transform: uppercase
 
 /* Распорка для float */
@@ -22,24 +23,48 @@
 	padding: 0 10px
 	width: 940px
 /* Верхнее меню */
-.n-top-menu
+.top-menu
 	float: left
-	padding: 20px 0 30px
 	width: 780px
+	font-size: 16px
+.n-top-menu ul
+	margin: 0
+	padding: 0
+	list-style-type: none
 .n-top-menu ul li
 	display: inline-block
+	vertical-align: top
 .n-top-menu ul li a
-	margin-right: 42px
+	display: block
+	padding: 25px 20px
 	color: #ffffff
+	line-height: 20px
+	text-decoration: none
+.n-top-menu ul li a:hover
+	background-color: #808080
 /* Верхнее меню авторизации */
 .top-account
 	float: right
-	padding: 20px 0 10px
-	width: 140px
-	text-align: center
-.top-account .account-enter
+	max-width: 140px
+.top-account-login
+	display: block
+	position: relative
+	padding: 25px 20px
 	color: #ffffff
-
+	font-size: 16px
+	line-height: 20px
+	text-decoration: none
+	text-align: center
+.top-account-login::before
+	content: ""
+	position: absolute
+	width: 10px
+	height: 10px
+	top: 30px
+	left: 27px
+	background: #ff0000
+.top-account-login:hover
+	background-color: #808080
 /* ----->Главный контент<----- */
 /* Центнировщик на главной */
 .main-center
@@ -49,6 +74,9 @@
 /* Главный логотип */
 .main-logo
 	margin: 57px auto 30px
+	height: 204px
+	width: 368px
+.main-logo a img
 	height: 204px
 	width: 368px
 /* Преимущества */
@@ -63,7 +91,6 @@
 	font-size: 30px
 /* Первый информационный блок */
 .first-info
-	padding: 0 10px
 	margin-bottom: 34px
 	width: 940px
 	background: url("../image/white_bg.jpg") no-repeat center
@@ -75,7 +102,6 @@
 	width: 400px
 /* Второй информационный блок */
 .second-info
-	padding: 0 10px
 	width: 940px
 	background: url("../image/white_bg.jpg") no-repeat center
 .second-info-contacts
