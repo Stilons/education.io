@@ -45,26 +45,29 @@ body
 /* Верхнее меню авторизации */
 .top-account
 	float: right
+	position: relative
 	max-width: 140px
 .top-account-login
-	display: block
-	position: relative
-	padding: 25px 20px
+	display: inline-block
+	padding: 25px 20px 25px 50px
 	color: #ffffff
 	font-size: 16px
 	line-height: 20px
+	vertical-align: top
 	text-decoration: none
-	text-align: center
 .top-account-login::before
 	content: ""
 	position: absolute
-	width: 10px
-	height: 10px
-	top: 30px
-	left: 27px
-	background: #ff0000
+	width: 18px
+	height: 16px
+	top: 27px
+	left: 10px
+	background: transparent url("../image/sprites.png") no-repeat -18px -21px
+	opacity: 0.3
 .top-account-login:hover
 	background-color: #808080
+.top-account-login:hover::before
+	opacity: 1
 /* ----->Главный контент<----- */
 /* Центнировщик на главной */
 .main-center
