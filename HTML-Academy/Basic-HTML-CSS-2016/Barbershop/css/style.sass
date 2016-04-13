@@ -2,12 +2,35 @@
 
 /* ----->Общее<----- */
 body
+	min-width: 960px
 	background: #000000 url("../image/background.jpg") no-repeat center top
 	font-family: PT Sans Narrow, Arial, sans-serif
 	font-size: 14px
+	font-weight: 700
 	line-height: 24px
 	text-transform: uppercase
+/* Настройка кнопок */
+.btn
+	display: inline-block
+	margin-right: 16px
+	padding: 10px 33px
 
+	font-family: PT Sans Narrow, Arial, sans-serif
+	font-size: 14px
+	font-weight: 700
+	line-height: 24px
+	vertical-align: middle
+	text-align: center
+	text-transform: uppercase
+	text-decoration: none
+
+	border: none
+	outline: none
+	cursor: pointer
+	color: #ffffff
+	background-color: #000000
+.btn:hover, .btn:active
+	background-color: #663d15
 /* Распорка для float */
 .clearfix::after
 	content: ""
@@ -27,12 +50,9 @@ body
 	float: left
 	width: 780px
 	font-size: 16px
-.n-top-menu ul
-	margin: 0
-	padding: 0
-	list-style-type: none
 .n-top-menu ul li
 	display: inline-block
+	list-style: none
 	vertical-align: top
 .n-top-menu ul li a
 	display: block
@@ -62,12 +82,13 @@ body
 	height: 16px
 	top: 27px
 	left: 10px
-	background: transparent url("../image/sprites.png") no-repeat -18px -21px
+	background: url("../image/sprites.png") no-repeat -18px -21px
 	opacity: 0.3
 .top-account-login:hover
 	background-color: #808080
 .top-account-login:hover::before
 	opacity: 1
+
 /* ----->Главный контент<----- */
 /* Центнировщик на главной */
 .main-center
@@ -86,27 +107,59 @@ body
 .s-advantages-item
 	float: left
 	margin-bottom: 86px
-	padding-right: 10px
 	width: 300px
 	color: #ffffff
 	text-align: center
 .s-advantage-item-title
+	position: relative
+	padding-bottom: 40px
+	margin-bottom: 35px
 	font-size: 30px
+	line-height: 36px
+.s-advantage-item-title::before
+	content: ""
+	position: absolute
+	bottom: 0
+	left: 50%
+	height: 20px
+	width: 20px
+	margin-left: -10px
+	background-color: #ffffff
+	transform: rotate(45deg)
+.s-advantages-item-description
+	margin: 10px 0 0 10px
+	padding-right: 10px
 /* Первый информационный блок */
 .first-info
 	margin-bottom: 34px
 	width: 940px
-	background: url("../image/white_bg.jpg") no-repeat center
+	background: #f8f5f2 url("../image/white_bg.jpg") no-repeat center
 .first-info-news
 	float: left
-	width: 400px
+	padding-right: 20px
+	margin-left: 80px
+	margin-bottom: 54px
+	width: 300px
+.first-info-news h2
+	margin-top: 50px
+	margin-bottom: 30px
+	font-size: 30px
+	line-height: 36px
+.s-first-info-news-preview li
+	list-style: none
+.s-first-info-news-preview time
+	display: block
+	margin-bottom: 25px
+	font-weight: 400
+	color: #323131
+//todo продолжить верстку отсюда
 .first-info-gallery
 	float: right
 	width: 400px
 /* Второй информационный блок */
 .second-info
 	width: 940px
-	background: url("../image/white_bg.jpg") no-repeat center
+	background: #f8f5f2 url("../image/white_bg.jpg") no-repeat center
 .second-info-contacts
 	float: left
 	width: 400px
@@ -114,10 +167,9 @@ body
 	float: right
 	width: 400px
 
-
 /* ----->Подвал сайта<----- */
 .main-footer
-	background-image: url(../image/footer_bg.jpg)
+	background: #232323 url(../image/footer_bg.jpg)
 /* Центнировщик в подвале */
 .footer-center
 	margin: 64px auto 0
