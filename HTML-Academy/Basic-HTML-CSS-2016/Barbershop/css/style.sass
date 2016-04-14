@@ -1,6 +1,11 @@
 @charset "utf-8"
 
-/* ----->Общее<----- */
+/**
+ *  ============================================================================
+ *      #Общие правила
+ *  ============================================================================
+ */
+
 body
 	min-width: 960px
 	background: #070707 url("../image/background.jpg") no-repeat center top
@@ -9,6 +14,32 @@ body
 	font-weight: 700
 	line-height: 24px
 	text-transform: uppercase
+
+/* Распорка для Float */
+.clearfix::after
+	content: ""
+	display: table
+	clear: both
+
+/**
+ *  ============================================================================
+ *       Сетка
+ *  ============================================================================
+ */
+
+/*  Сетка шапки сайта
+ ------------------------------------------------------------------------------*/
+/* Центнировщик в шапке */
+.header-center
+	margin: 0 auto
+	padding: 0 10px
+	width: 940px
+
+/* Верхнее меню */
+.top-menu
+	float: left
+	width: 780px
+
 /* Настройка кнопок */
 .btn
 	display: inline-block
@@ -31,24 +62,14 @@ body
 	background-color: #000000
 .btn:hover, .btn:active
 	background-color: #663d15
-/* Распорка для float */
-.clearfix::after
-	content: ""
-	display: table
-	clear: both
+
 
 /* ----->Шапка сайта<----- */
 .main-header
 	background-color: #000000
-/* Центнировщик в шапке */
-.header-center
-	margin: 0 auto
-	padding: 0 10px
-	width: 940px
+
 /* Верхнее меню */
 .top-menu
-	float: left
-	width: 780px
 	font-size: 16px
 .n-top-menu ul li
 	display: inline-block
@@ -106,10 +127,13 @@ body
 /* Преимущества */
 .s-advantages-item
 	float: left
+	margin-right: 20px
 	margin-bottom: 86px
 	width: 300px
 	color: #ffffff
 	text-align: center
+.s-advantages-item:last-child
+	margin-right: 0
 .s-advantage-item-title
 	position: relative
 	padding-bottom: 40px
@@ -218,9 +242,7 @@ body
 	text-transform: uppercase
 	border: #000000 solid 3px
 .second-info-record-appointment-form input[type="text"]:hover,
-.second-info-record-appointment-form input[type="tel"]:hover,
-.second-info-record-appointment-form input[type="text"]:active,
-.second-info-record-appointment-form input[type="tel"]:active
+.second-info-record-appointment-form input[type="tel"]:hover
 	border: #663d15 solid 3px
 .second-info-record-appointment-form input[type="submit"]
 	width: 100%
@@ -241,7 +263,7 @@ body
 /* Контактная информация */
 .footer-address
 	float: left
-	margin-right: 30px
+	margin-right: 65px
 	padding-right: 10px
 	width: 310px
 .footer-address span
@@ -253,25 +275,33 @@ body
 .footer-social
 	float: left
 	padding: 0 10px
-	margin-right: 240px
-	width: 140px
+	margin-right: 175px
 .footer-social h3
 	margin-bottom: 11px
 	text-align: center
 .social-btn
 	display: inline-block
-	margin-right: 2px
+	margin-right: 6px
 	height: 42px
 	width: 42px
 	font-size: 0
 	text-decoration: none
 	background: #000000 url("../image/sprites.png") no-repeat center
+	transition: top 0.3s ease
+.social-btn:hover
+	background: #ffffff url("../image/sprites.png") no-repeat center
 .social-btn-vk
 	background-position: -155px -4px
+.social-btn-vk:hover
+	background-position: -205px -4px
 .social-btn-fb
-	background-position: -52px -5px
+	background-position: -52px -4px
+.social-btn-fb:hover
+	background-position: -102px -4px
 .social-btn-inst
 	background-position: -254px -4px
+.social-btn-inst:hover
+	background-position: -301px -4px
 /* Разработчики */
 .footer-developers
 	float: right

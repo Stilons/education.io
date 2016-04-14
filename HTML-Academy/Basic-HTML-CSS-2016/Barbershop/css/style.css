@@ -1,22 +1,31 @@
 @charset "UTF-8";
-/* ----->Общее<----- */
+/**
+ *  ============================================================================
+ *      #Общие правила
+ *  ============================================================================
+ */
 body {
-  background: #000000 url("../image/background.jpg") no-repeat center top;
+  min-width: 960px;
+  background: #070707 url("../image/background.jpg") no-repeat center top;
   font-family: PT Sans Narrow, Arial, sans-serif;
   font-size: 14px;
+  font-weight: 700;
   line-height: 24px;
   text-transform: uppercase; }
 
-/* Распорка для float */
+/* Распорка для Float */
 .clearfix::after {
   content: "";
   display: table;
   clear: both; }
 
-/* ----->Шапка сайта<----- */
-.main-header {
-  background-color: #000000; }
-
+/**
+ *  ============================================================================
+ *       Сетка
+ *  ============================================================================
+ */
+/*  Сетка шапки сайта
+ * ------------------------------------------------------------------------------ */
 /* Центнировщик в шапке */
 .header-center {
   margin: 0 auto;
@@ -26,16 +35,41 @@ body {
 /* Верхнее меню */
 .top-menu {
   float: left;
-  width: 780px;
-  font-size: 16px; }
+  width: 780px; }
 
-.n-top-menu ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none; }
+/* Настройка кнопок */
+.btn {
+  display: inline-block;
+  margin-right: 16px;
+  padding: 10px 33px;
+  font-family: PT Sans Narrow, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #000000; }
+
+.btn:hover, .btn:active {
+  background-color: #663d15; }
+
+/* ----->Шапка сайта<----- */
+.main-header {
+  background-color: #000000; }
+
+/* Верхнее меню */
+.top-menu {
+  font-size: 16px; }
 
 .n-top-menu ul li {
   display: inline-block;
+  list-style: none;
   vertical-align: top; }
 
 .n-top-menu ul li a {
@@ -70,7 +104,7 @@ body {
   height: 16px;
   top: 27px;
   left: 10px;
-  background: transparent url("../image/sprites.png") no-repeat -18px -21px;
+  background: url("../image/sprites.png") no-repeat -15px -17px;
   opacity: 0.3; }
 
 .top-account-login:hover {
@@ -99,67 +133,240 @@ body {
 /* Преимущества */
 .s-advantages-item {
   float: left;
+  margin-right: 20px;
   margin-bottom: 86px;
-  padding-right: 10px;
   width: 300px;
   color: #ffffff;
   text-align: center; }
 
+.s-advantages-item:last-child {
+  margin-right: 0; }
+
 .s-advantage-item-title {
-  font-size: 30px; }
+  position: relative;
+  padding-bottom: 40px;
+  margin-bottom: 35px;
+  font-size: 30px;
+  line-height: 36px; }
+
+.s-advantage-item-title::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 20px;
+  width: 20px;
+  margin-left: -10px;
+  background-color: #ffffff;
+  transform: rotate(45deg); }
+
+.s-advantages-item-description {
+  margin: 10px 0 0 10px;
+  padding-right: 10px; }
 
 /* Первый информационный блок */
 .first-info {
   margin-bottom: 34px;
   width: 940px;
-  background: url("../image/white_bg.jpg") no-repeat center; }
+  background: #f8f5f2 url("../image/white_bg.jpg") no-repeat center; }
 
 .first-info-news {
   float: left;
-  width: 400px; }
+  padding: 0 20px;
+  margin-left: 60px;
+  margin-bottom: 54px;
+  width: 300px; }
+
+.first-info-news h2 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 30px;
+  line-height: 36px; }
+
+.s-first-info-news-preview li {
+  list-style: none; }
+
+.s-first-info-news-preview time {
+  display: block;
+  margin-bottom: 25px;
+  font-weight: 400;
+  color: #323131; }
 
 .first-info-gallery {
   float: right;
-  width: 400px; }
+  padding: 0 10px;
+  margin-left: 80px;
+  margin-right: 70px;
+  width: 300px; }
+
+.first-info-gallery h2 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 30px;
+  line-height: 36px; }
+
+.s-first-info-gallery-photo img {
+  margin-bottom: 36px;
+  border: #ffffff solid 5px; }
+
+.btn-prev {
+  float: left;
+  width: 140px; }
+
+.btn-next {
+  float: right;
+  margin-right: 0;
+  width: 140px; }
 
 /* Второй информационный блок */
 .second-info {
   width: 940px;
-  background: url("../image/white_bg.jpg") no-repeat center; }
+  background: #f8f5f2 url("../image/white_bg.jpg") no-repeat center; }
 
 .second-info-contacts {
   float: left;
-  width: 400px; }
+  padding: 0 20px;
+  margin-left: 60px;
+  margin-bottom: 54px;
+  width: 350px; }
+
+.second-info-contacts h2 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 30px;
+  line-height: 36px; }
+
+.second-info-contacts-address {
+  margin-bottom: 25px; }
+
+.second-info-contacts-address a {
+  color: #000000;
+  text-decoration: none; }
+
+.second-info-contacts-time {
+  margin-bottom: 46px; }
 
 .second-info-record {
   float: right;
-  width: 400px; }
+  margin-left: 80px;
+  margin-right: 60px;
+  padding: 0 20px;
+  width: 300px; }
+
+.second-info-record h2 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 30px;
+  line-height: 36px; }
+
+.second-info-record p {
+  margin-bottom: 28px; }
+
+.second-info-record-appointment-form input[type="text"],
+.second-info-record-appointment-form input[type="tel"] {
+  padding: 7px 0 7px 17px;
+  width: 115px;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-transform: uppercase;
+  border: #000000 solid 3px; }
+
+.second-info-record-appointment-form input[type="text"]:hover,
+.second-info-record-appointment-form input[type="tel"]:hover {
+  border: #663d15 solid 3px; }
+
+.second-info-record-appointment-form input[type="submit"] {
+  width: 100%; }
+
+.second-info-record-appointment-form input:nth-child(odd) {
+  margin-right: 20px;
+  margin-bottom: 20px; }
+
+.second-info-record-appointment-form input:nth-child(4) {
+  margin-bottom: 30px; }
 
 /* ----->Подвал сайта<----- */
 .main-footer {
-  background-image: url(../image/footer_bg.jpg); }
+  background: #232323 url(../image/footer_bg.jpg); }
 
 /* Центнировщик в подвале */
 .footer-center {
   margin: 64px auto 0;
-  padding: 0 10px;
-  width: 940px; }
+  padding: 58px 10px 40px;
+  width: 940px;
+  color: #ffffff; }
 
 /* Контактная информация */
 .footer-address {
   float: left;
-  margin-right: 10px;
-  width: 320px; }
+  margin-right: 65px;
+  padding-right: 10px;
+  width: 310px; }
+
+.footer-address span {
+  text-decoration: underline; }
+
+.footer-address a {
+  color: #ffffff;
+  text-decoration: none; }
 
 /* Кнопки соц сетей */
 .footer-social {
   float: left;
-  margin-right: 10px;
-  width: 220px; }
+  padding: 0 10px;
+  margin-right: 175px; }
+
+.footer-social h3 {
+  margin-bottom: 11px;
+  text-align: center; }
+
+.social-btn {
+  display: inline-block;
+  margin-right: 6px;
+  height: 42px;
+  width: 42px;
+  font-size: 0;
+  text-decoration: none;
+  background: #000000 url("../image/sprites.png") no-repeat center;
+  transition: top 0.3s ease; }
+
+.social-btn:hover {
+  background: #ffffff url("../image/sprites.png") no-repeat center; }
+
+.social-btn-vk {
+  background-position: -155px -4px; }
+
+.social-btn-vk:hover {
+  background-position: -205px -4px; }
+
+.social-btn-fb {
+  background-position: -52px -4px; }
+
+.social-btn-fb:hover {
+  background-position: -102px -4px; }
+
+.social-btn-inst {
+  background-position: -254px -4px; }
+
+.social-btn-inst:hover {
+  background-position: -301px -4px; }
 
 /* Разработчики */
 .footer-developers {
   float: right;
+  padding-left: 10px;
   width: 140px; }
+
+.footer-developers h3 {
+  margin-bottom: 11px;
+  text-align: center; }
+
+.footer-developers .btn {
+  box-sizing: border-box;
+  margin-right: 0;
+  padding: 10px 0;
+  width: 140px;
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
