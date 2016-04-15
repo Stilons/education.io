@@ -4,38 +4,21 @@
  *      #Общие правила
  *  ============================================================================
  */
+/* Общее */
 body {
   min-width: 960px;
-  background: #070707 url("../image/background.jpg") no-repeat center top;
   font-family: PT Sans Narrow, Arial, sans-serif;
   font-size: 14px;
   font-weight: 700;
   line-height: 24px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  background: #070707 url("../image/background.jpg") no-repeat center top; }
 
-/* Распорка для Float */
+/* Распорка для float */
 .clearfix::after {
   content: "";
   display: table;
   clear: both; }
-
-/**
- *  ============================================================================
- *       Сетка
- *  ============================================================================
- */
-/*  Сетка шапки сайта
- * ------------------------------------------------------------------------------ */
-/* Центнировщик в шапке */
-.header-center {
-  margin: 0 auto;
-  padding: 0 10px;
-  width: 940px; }
-
-/* Верхнее меню */
-.top-menu {
-  float: left;
-  width: 780px; }
 
 /* Настройка кнопок */
 .btn {
@@ -59,18 +42,37 @@ body {
 .btn:hover, .btn:active {
   background-color: #663d15; }
 
-/* ----->Шапка сайта<----- */
+/**
+ *  ============================================================================
+ *       #Шапка сайта
+ *  ============================================================================
+ */
+/*  Общие настройки
+ * ------------------------------------------------------------------------------ */
 .main-header {
   background-color: #000000; }
 
-/* Верхнее меню */
+/* Центнировщик */
+.header-center {
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 940px; }
+
+/*  Меню
+ * ------------------------------------------------------------------------------ */
+/* Расположение меню */
 .top-menu {
+  float: left;
+  width: 780px;
   font-size: 16px; }
 
 .n-top-menu ul li {
   display: inline-block;
   list-style: none;
   vertical-align: top; }
+
+.n-top-menu ul li:first-child {
+  border-bottom: #ffffff solid 5px; }
 
 .n-top-menu ul li a {
   display: block;
@@ -82,7 +84,9 @@ body {
 .n-top-menu ul li a:hover {
   background-color: #808080; }
 
-/* Верхнее меню авторизации */
+/*  Авторизация
+ * ------------------------------------------------------------------------------ */
+/* Расположение блока авторизации */
 .top-account {
   float: right;
   position: relative;
@@ -97,6 +101,7 @@ body {
   vertical-align: top;
   text-decoration: none; }
 
+/* Иконка перед "Вход" */
 .top-account-login::before {
   content: "";
   position: absolute;
@@ -113,14 +118,22 @@ body {
 .top-account-login:hover::before {
   opacity: 1; }
 
-/* ----->Главный контент<----- */
-/* Центнировщик на главной */
+/**
+ *  ============================================================================
+ *       #Главный контент
+ *  ============================================================================
+ */
+ *
+ * /*  Общие настройки
+ * ------------------------------------------------------------------------------ */
+/* Центнировщик */
 .main-center {
   margin: 0 auto;
   padding: 0 10px;
   width: 940px; }
 
-/* Главный логотип */
+/* Главный логотип
+ * ------------------------------------------------------------------------------ */
 .main-logo {
   margin: 57px auto 30px;
   height: 204px;
@@ -130,7 +143,9 @@ body {
   height: 204px;
   width: 368px; }
 
-/* Преимущества */
+/* Блок преимущества
+ * ------------------------------------------------------------------------------ */
+/* Расположение блока преимуществ */
 .s-advantages-item {
   float: left;
   margin-right: 20px;
@@ -142,6 +157,7 @@ body {
 .s-advantages-item:last-child {
   margin-right: 0; }
 
+/* Заголовок блока преимуществ */
 .s-advantage-item-title {
   position: relative;
   padding-bottom: 40px;
@@ -149,6 +165,7 @@ body {
   font-size: 30px;
   line-height: 36px; }
 
+/* Ромб под заголовком */
 .s-advantage-item-title::before {
   content: "";
   position: absolute;
@@ -160,16 +177,22 @@ body {
   background-color: #ffffff;
   transform: rotate(45deg); }
 
+/* Описание преимуществ */
 .s-advantages-item-description {
   margin: 10px 0 0 10px;
   padding-right: 10px; }
 
-/* Первый информационный блок */
+/* Первый информационный блок
+ * ------------------------------------------------------------------------------ */
+/* Расположение первого информацонного блока */
 .first-info {
   margin-bottom: 34px;
   width: 940px;
   background: #f8f5f2 url("../image/white_bg.jpg") no-repeat center; }
 
+/* Первый информационный блок - Новости
+ * ------------------------------------------------------------------------------ */
+/* Расположение первого информацонного блока - Новости */
 .first-info-news {
   float: left;
   padding: 0 20px;
@@ -177,6 +200,7 @@ body {
   margin-bottom: 54px;
   width: 300px; }
 
+/* Заголовок новостей */
 .first-info-news h2 {
   margin-top: 50px;
   margin-bottom: 30px;
@@ -186,12 +210,16 @@ body {
 .s-first-info-news-preview li {
   list-style: none; }
 
+/* Время публикации новостей */
 .s-first-info-news-preview time {
   display: block;
   margin-bottom: 25px;
   font-weight: 400;
   color: #323131; }
 
+/* Первый информационный блок - Галерея
+ * ------------------------------------------------------------------------------ */
+/* Расположение первого информацонного блока - Галерея */
 .first-info-gallery {
   float: right;
   padding: 0 10px;
@@ -199,16 +227,21 @@ body {
   margin-right: 70px;
   width: 300px; }
 
+/* Заголовок галереи */
 .first-info-gallery h2 {
   margin-top: 50px;
   margin-bottom: 30px;
   font-size: 30px;
   line-height: 36px; }
 
+/* Изображения галереи */
 .s-first-info-gallery-photo img {
   margin-bottom: 36px;
+  width: 286px;
+  height: 164px;
   border: #ffffff solid 5px; }
 
+/* Настройка кнопок перехода */
 .btn-prev {
   float: left;
   width: 140px; }
@@ -218,11 +251,16 @@ body {
   margin-right: 0;
   width: 140px; }
 
-/* Второй информационный блок */
+/* Второй информационный блок
+ * ------------------------------------------------------------------------------ */
+/* Расположение второго информацонного блока */
 .second-info {
   width: 940px;
   background: #f8f5f2 url("../image/white_bg.jpg") no-repeat center; }
 
+/* Второй информационный блок - Контакты
+ * ------------------------------------------------------------------------------ */
+/* Расположение второго информацонного блока - Контакты */
 .second-info-contacts {
   float: left;
   padding: 0 20px;
@@ -230,12 +268,14 @@ body {
   margin-bottom: 54px;
   width: 350px; }
 
+/* Заголовок контактов */
 .second-info-contacts h2 {
   margin-top: 50px;
   margin-bottom: 30px;
   font-size: 30px;
   line-height: 36px; }
 
+/* Контактная информация */
 .second-info-contacts-address {
   margin-bottom: 25px; }
 
@@ -243,9 +283,13 @@ body {
   color: #000000;
   text-decoration: none; }
 
+/* Время работы */
 .second-info-contacts-time {
   margin-bottom: 46px; }
 
+/* Второй информационный блок - Запись на прием
+ * ------------------------------------------------------------------------------ */
+/* Расположение второго информацонного блока - Запись на прием */
 .second-info-record {
   float: right;
   margin-left: 80px;
@@ -253,12 +297,14 @@ body {
   padding: 0 20px;
   width: 300px; }
 
+/* Заголовок записи на прием */
 .second-info-record h2 {
   margin-top: 50px;
   margin-bottom: 30px;
   font-size: 30px;
   line-height: 36px; }
 
+/* Форма зписи на прием */
 .second-info-record p {
   margin-bottom: 28px; }
 
@@ -286,18 +332,26 @@ body {
 .second-info-record-appointment-form input:nth-child(4) {
   margin-bottom: 30px; }
 
-/* ----->Подвал сайта<----- */
+/**
+ *  ============================================================================
+ *       #Подвал сайта
+ *  ============================================================================
+ */
+/*  Общие настройки
+ * ------------------------------------------------------------------------------ */
 .main-footer {
   background: #232323 url(../image/footer_bg.jpg); }
 
-/* Центнировщик в подвале */
+/* Центнировщик */
 .footer-center {
   margin: 64px auto 0;
   padding: 58px 10px 40px;
   width: 940px;
   color: #ffffff; }
 
-/* Контактная информация */
+/*  Контактная информация
+ * ------------------------------------------------------------------------------ */
+/* Расположение блока контактной информации */
 .footer-address {
   float: left;
   margin-right: 65px;
@@ -311,16 +365,20 @@ body {
   color: #ffffff;
   text-decoration: none; }
 
-/* Кнопки соц сетей */
+/*  Социальные сети
+ * ------------------------------------------------------------------------------ */
+/* Расположение блока соц сетей */
 .footer-social {
   float: left;
   padding: 0 10px;
   margin-right: 175px; }
 
+/* Заголовок блока соц сетей */
 .footer-social h3 {
   margin-bottom: 11px;
   text-align: center; }
 
+/* Настройка кнопок соц сетей */
 .social-btn {
   display: inline-block;
   margin-right: 6px;
@@ -352,16 +410,20 @@ body {
 .social-btn-inst:hover {
   background-position: -301px -4px; }
 
-/* Разработчики */
+/*  Разработчики
+ * ------------------------------------------------------------------------------ */
+/* Расположение блока разработчиков */
 .footer-developers {
   float: right;
   padding-left: 10px;
   width: 140px; }
 
+/* Заголовок блока разработчиков */
 .footer-developers h3 {
   margin-bottom: 11px;
   text-align: center; }
 
+/* Кнопка блока соц сетей */
 .footer-developers .btn {
   box-sizing: border-box;
   margin-right: 0;
