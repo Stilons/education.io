@@ -71,8 +71,8 @@ body {
   list-style: none;
   vertical-align: top; }
 
-.n-top-menu ul li:first-child {
-  border-bottom: #ffffff solid 5px; }
+.active-link {
+  border-bottom: #ffffff solid 3px; }
 
 .n-top-menu ul li a {
   display: block;
@@ -128,28 +128,31 @@ body {
  * ------------------------------------------------------------------------------ */
 /* Центнировщик */
 .main-center {
-  margin: 0 auto;
+  margin: 0 auto 64px;
   padding: 0 10px;
   width: 940px; }
 
 /* Главный логотип
  * ------------------------------------------------------------------------------ */
 .main-logo {
-  margin: 57px auto 30px;
-  height: 204px;
-  width: 368px; }
+  margin: 0 auto;
+  padding: 57px 0 30px;
+  width: 368px;
+  height: 204px; }
 
 .main-logo a img {
-  height: 204px;
-  width: 368px; }
+  width: 368px;
+  height: 204px; }
 
-/* Блок преимущества
+/* Блок преимуществ
  * ------------------------------------------------------------------------------ */
 /* Расположение блока преимуществ */
+.advantages {
+  margin-bottom: 86px; }
+
 .s-advantages-item {
   float: left;
   margin-right: 20px;
-  margin-bottom: 86px;
   width: 300px;
   color: #ffffff;
   text-align: center; }
@@ -161,7 +164,7 @@ body {
 .s-advantage-item-title {
   position: relative;
   padding-bottom: 40px;
-  margin-bottom: 35px;
+  margin-bottom: 45px;
   font-size: 30px;
   line-height: 36px; }
 
@@ -179,8 +182,7 @@ body {
 
 /* Описание преимуществ */
 .s-advantages-item-description {
-  margin: 10px 0 0 10px;
-  padding-right: 10px; }
+  margin: 0 10px 0 10px; }
 
 /* Первый информационный блок
  * ------------------------------------------------------------------------------ */
@@ -209,6 +211,10 @@ body {
 
 .s-first-info-news-preview li {
   list-style: none; }
+
+.news-link {
+  color: inherit;
+  text-decoration: none; }
 
 /* Время публикации новостей */
 .s-first-info-news-preview time {
@@ -344,7 +350,7 @@ body {
 
 /* Центнировщик */
 .footer-center {
-  margin: 64px auto 0;
+  margin: 0 auto;
   padding: 58px 10px 40px;
   width: 940px;
   color: #ffffff; }
@@ -386,8 +392,7 @@ body {
   width: 42px;
   font-size: 0;
   text-decoration: none;
-  background: #000000 url("../image/sprites.png") no-repeat center;
-  transition: top 0.3s ease; }
+  background: #000000 url("../image/sprites.png") no-repeat center; }
 
 .social-btn:hover {
   background: #ffffff url("../image/sprites.png") no-repeat center; }
